@@ -1,0 +1,21 @@
+MapSplit v2 - by Orion_ [2010/2015]
+
+https://orionsoft.games
+orionsoft@free.fr
+
+
+MapSplit is a tool that can split a map made of a fixed tile size into a smaller tile size.
+For example, let's say you have a map made of 32x32 pixels tiles, but your engine or the console your are developping for only accept 8x8 pixels tiles.
+MapSplit will convert your map according to that, and the new map will be usable with 8 pixels tiles ! (without modifying the original tileset)
+
+Usage:
+mapsplit mapfile.map outfile.map InputTileSize OutputTileSize TileSetWidth [-bigendian | -byte]
+
+The map input and output format is the one made by my tmx2bin tool !
+
+InputTileSize is the tile size of the input map. (exemple 32)
+OutputTileSize is the desired tile size for the output map. (exemple 8)
+TileSetWidth is the image width of the tileset associated to the map.
+
+Default output is little endian WORD.
+v2: Support for BigEndian and Byte mode added (tmx2bin also support these mode)
